@@ -47,7 +47,7 @@ const FormAdd: React.FC = () => {
           />
         </Form.Group>
         <Form.Group className="ms-2">
-          <Button type="submit">Submit</Button>
+          <Button type="submit">ADD</Button>
         </Form.Group>
       </div>
     </Form>
