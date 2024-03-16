@@ -35,7 +35,7 @@ const App: React.FC = () => {
   const handleConfirmDelete = async () => { // Define handleConfirmDelete as an async function
     if (deleteTodoId !== null) {
       try {
-        const response = await fetch(`http://localhost:3000/api/todos/${deleteTodoId}`, { // Use deleteTodoId instead of id
+        const response = await fetch(`https://terranxt-backend.onrender.com/api/todos/${deleteTodoId}`, { // Use deleteTodoId instead of id
           method: 'DELETE',
         });
         if (!response.ok) {
@@ -59,7 +59,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/todos');
+        const response = await fetch('https://terranxt-assignment.onrender.com/api/todos');
         if (!response.ok) {
           throw new Error('Failed to fetch todos');
         }

@@ -30,7 +30,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
 
   const handleDelete = async () => { // Define handleDelete as an async function
     try {
-      const response = await fetch(`http://localhost:3000/api/todos/${id}`, {
+      const response = await fetch(`https://terranxt-backend.onrender.com/api/todos/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {

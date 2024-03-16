@@ -11,7 +11,8 @@ const FormAdd: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => { // Define handleSubmit as an async function
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/todos', {
+      
+      const response = await fetch('https://terranxt-backend.onrender.com/api/todos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
