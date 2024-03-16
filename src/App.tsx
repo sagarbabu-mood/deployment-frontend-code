@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Container, Modal, Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { CircleLoader } from "react-spinners"; // Import CircleLoader from react-spinners
+import { CircleLoader } from "react-spinners";
 import "./App.css";
 
 import FormAdd from "./components/FormAdd";
@@ -11,7 +11,7 @@ import { removeTodo, setTodos } from "./redux/slice/todoSlice";
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(true); // Initialize loading state as true
+  const [loading, setLoading] = useState(true);
 
   const todoList = useSelector((state: any) => state.todo.list);
 
@@ -75,8 +75,8 @@ const App: React.FC = () => {
 
   return (
     <div className="App d-flex justify-content-center p-5">
-      <div className="w-50">
-        <Container>
+      <Container fluid="md"> {/* Use fluid="md" to make the container responsive */}
+        <div className="w-100">
           {loading ? (
             <div className="d-flex justify-content-center align-items-center" style={{ height: "200px" }}>
               <CircleLoader color="#007bff" loading={loading} size={100} />
@@ -99,12 +99,12 @@ const App: React.FC = () => {
               </Modal>
               <FormAdd />
               <h1 className="title">Todo App</h1>
-              <Table striped hover bordered style={{ textAlign: "center", verticalAlign: "middle" }}>
+              <Table striped hover bordered responsive="md"> {/* Use responsive="md" to make the table responsive */}
                 <thead>
                   <tr>
                     <th>Name</th>
                     <th>Status</th>
-                    <th colSpan={2}>Action</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -123,8 +123,8 @@ const App: React.FC = () => {
               </Table>
             </>
           )}
-        </Container>
-      </div>
+        </div>
+      </Container>
     </div>
   );
 };

@@ -1,44 +1,41 @@
-
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../redux/slice/todoSlice"; // Import addTodo action
+import { addTodo } from "../redux/slice/todoSlice";
 
 const FormAdd: React.FC = () => {
   const [todo, setTodo] = useState("");
   const dispatch = useDispatch();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => { // Define handleSubmit as an async function
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      
       const response = await fetch('https://terranxt-backend.onrender.com/api/todos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name: todo }), // Pass the todo value as name property
+        body: JSON.stringify({ name: todo }),
       });
       if (!response.ok) {
         throw new Error('Failed to create todo');
       }
       const newTodo = await response.json();
-      dispatch(addTodo(newTodo)); // Dispatch addTodo action upon successful creation
-      setTodo(''); // Clear the input field after submission
+      dispatch(addTodo(newTodo));
+      setTodo('');
     } catch (error) {
       if (error instanceof Error) {
-        console.error('Error creating todo:', error.message); // Corrected error message
+        console.error('Error creating todo:', error.message);
       } else {
         console.error('Unknown error:', error);
       }
     }
-    
   };
 
   return (
     <Form onSubmit={handleSubmit} className="mb-4">
       <div className="d-flex">
-        <Form.Group style={{ width: "100%" }}>
+        <Form.Group style={{ flex: "1" }}>
           <Form.Control
             required
             placeholder="Add Todo"

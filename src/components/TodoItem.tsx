@@ -3,7 +3,7 @@ import { Badge } from "react-bootstrap";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { removeTodo, updateStatus } from "../redux/slice/todoSlice";
-import { ClipLoader } from "react-spinners"; // Import ClipLoader from React Spinners
+import { ClipLoader } from "react-spinners";
 
 interface TodoItemProps {
   id: number;
@@ -20,9 +20,10 @@ const TodoItem: React.FC<TodoItemProps> = ({
   isDone,
   createdAt,
   updatedAt,
+  onClickRemove,
 }) => {
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(false); // State to manage loading state
+  const [loading, setLoading] = useState(false);
 
   const handleStatusUpdate = () => {
     dispatch(updateStatus({ id }));
@@ -30,7 +31,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
 
   const handleDelete = async () => {
     try {
-      setLoading(true); // Set loading state to true
+      setLoading(true);
       const response = await fetch(`https://terranxt-backend.onrender.com/api/todos/${id}`, {
         method: 'DELETE',
       });
@@ -45,7 +46,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
         console.error('Unknown error:', error);
       }
     } finally {
-      setLoading(false); // Set loading state back to false after operation completes
+      setLoading(false);
     }
   };
 
@@ -63,15 +64,13 @@ const TodoItem: React.FC<TodoItemProps> = ({
         </Badge><br/>
         {isDone && <Badge>{updatedAt}</Badge>}
       </td>
-      {!isDone && (
-        <td>
+      <td>
+        {!isDone && (
           <div style={{ color: "green" }} onClick={handleStatusUpdate}>
             <FaCheck />
           </div>
-        </td>
-      )}
-      <td colSpan={isDone ? 2 : 1}>
-        {loading ? ( // Render loader if loading state is true
+        )}
+        {loading ? (
           <ClipLoader color={"#000"} loading={loading} size={30} />
         ) : (
           <div style={{ color: "red" }} onClick={handleDelete}>
