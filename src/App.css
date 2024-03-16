@@ -1,15 +1,15 @@
 .App {
-  background-image: 
-  radial-gradient(circle at 40% 91%, rgba(251, 251, 251,0.04) 0%, rgba(251, 251, 251,0.04) 50%,rgba(229, 229, 229,0.04) 50%, rgba(229, 229, 229,0.04) 100%),
-  radial-gradient(circle at 66% 97%, rgba(36, 36, 36,0.04) 0%, rgba(36, 36, 36,0.04) 50%,rgba(46, 46, 46,0.04) 50%, rgba(46, 46, 46,0.04) 100%),
-  radial-gradient(circle at 86% 7%, rgba(40, 40, 40,0.04) 0%, rgba(40, 40, 40,0.04) 50%,rgba(200, 200, 200,0.04) 50%, rgba(200, 200, 200,0.04) 100%),
-  radial-gradient(circle at 15% 16%, rgba(99, 99, 99,0.04) 0%, rgba(99, 99, 99,0.04) 50%,rgba(45, 45, 45,0.04) 50%, rgba(45, 45, 45,0.04) 100%),
-  radial-gradient(circle at 75% 99%, rgba(243, 243, 243,0.04) 0%, rgba(243, 243, 243,0.04) 50%,rgba(37, 37, 37,0.04) 50%, rgba(37, 37, 37,0.04) 100%),
-  linear-gradient(90deg, rgb(34, 222, 237),rgb(135, 89, 215));
+  
+  background-image: linear-gradient(90deg, rgb(237, 237, 237), rgb(236, 216, 19)), linear-gradient(135deg, rgb(163, 104, 62) 0%, rgb(163, 104, 62) 22%, rgb(149, 100, 59) 22%, rgb(149, 100, 59) 32%, rgb(134, 75, 56) 32%, rgb(134, 75, 56) 37%, rgb(120, 50, 53) 37%, rgb(120, 50, 53) 51%, rgb(105, 25, 50) 51%, rgb(105, 25, 50) 55%, rgb(91, 0, 47) 55%, rgb(91, 0, 47) 100%), linear-gradient(112.5deg, rgb(163, 104, 62) 0%, rgb(163, 104, 62) 22%, rgb(149, 100, 59) 22%, rgb(149, 100, 59) 32%, rgb(134, 75, 56) 32%, rgb(134, 75, 56) 37%, rgb(120, 50, 53) 37%, rgb(120, 50, 53) 51%, rgb(105, 25, 50) 51%, rgb(105, 25, 50) 55%, rgb(91, 0, 47) 55%, rgb(91, 0, 47) 100%), linear-gradient(90deg, rgb(163, 104, 62) 0%, rgb(163, 104, 62) 22%, rgb(149, 100, 59) 22%, rgb(149, 100, 59) 32%, rgb(134, 75, 56) 32%, rgb(134, 75, 56) 37%, rgb(120, 50, 53) 37%, rgb(120, 50, 53) 51%, rgb(105, 25, 50) 51%, rgb(105, 25, 50) 55%, rgb(91, 0, 47) 55%, rgb(91, 0, 47) 100%);
+  background-blend-mode: overlay, overlay, overlay, normal;
   height: 100vh;
   background-size: cover;
   color: rgb(12, 41, 209);
 
+}
+.background {
+  background-image: linear-gradient(90deg, rgb(237, 237, 237), rgb(236, 236, 236)), linear-gradient(135deg, rgb(163, 125, 62) 0%, rgb(163, 125, 62) 22%, rgb(149, 100, 59) 22%, rgb(149, 100, 59) 32%, rgb(134, 75, 56) 32%, rgb(134, 75, 56) 37%, rgb(120, 50, 53) 37%, rgb(120, 50, 53) 51%, rgb(105, 25, 50) 51%, rgb(105, 25, 50) 55%, rgb(91, 0, 47) 55%, rgb(91, 0, 47) 100%), linear-gradient(112.5deg, rgb(163, 125, 62) 0%, rgb(163, 125, 62) 22%, rgb(149, 100, 59) 22%, rgb(149, 100, 59) 32%, rgb(134, 75, 56) 32%, rgb(134, 75, 56) 37%, rgb(120, 50, 53) 37%, rgb(120, 50, 53) 51%, rgb(105, 25, 50) 51%, rgb(105, 25, 50) 55%, rgb(91, 0, 47) 55%, rgb(91, 0, 47) 100%), linear-gradient(90deg, rgb(163, 125, 62) 0%, rgb(163, 125, 62) 22%, rgb(149, 100, 59) 22%, rgb(149, 100, 59) 32%, rgb(134, 75, 56) 32%, rgb(134, 75, 56) 37%, rgb(120, 50, 53) 37%, rgb(120, 50, 53) 51%, rgb(105, 25, 50) 51%, rgb(105, 25, 50) 55%, rgb(91, 0, 47) 55%, rgb(91, 0, 47) 100%);
+  background-blend-mode: overlay, overlay, overlay, normal;
 }
 
 .App-logo {

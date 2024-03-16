@@ -98,7 +98,7 @@ const App: React.FC = () => {
                 </Modal.Footer>
               </Modal>
               <FormAdd />
-              <h1 className="title">Todo App</h1>
+              <h1 className="heading">My Tasks</h1>
               <Table striped hover bordered responsive="md"> {/* Use responsive="md" to make the table responsive */}
                 <thead>
                   <tr>

@@ -33,6 +33,8 @@ const FormAdd: React.FC = () => {
   };
 
   return (
+    <div>
+      <h1 className="heading">Create task</h1>
     <Form onSubmit={handleSubmit} className="mb-4">
       <div className="d-flex">
         <Form.Group style={{ flex: "1" }}>
@@ -48,6 +50,7 @@ const FormAdd: React.FC = () => {
         </Form.Group>
       </div>
     </Form>
+    </div>
   );
 };
 
